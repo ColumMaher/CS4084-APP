@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "107452859525",
+    "project_id": "cs4084app-29f54",
+    "storage_bucket": "cs4084app-29f54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107452859525:android:6e4f9465073f65f80015ec",
+        "android_client_info": {
+          "package_name": "ie.ul.cs4084app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107452859525-a6dv6fmhe89smfqfkj1er4qse3j331mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkCmPcYq4fdCYJx18voH1W5Zof_9dqB-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107452859525-a6dv6fmhe89smfqfkj1er4qse3j331mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
