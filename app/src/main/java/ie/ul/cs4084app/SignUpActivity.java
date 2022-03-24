@@ -82,6 +82,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     if (task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
+                                        //add intent to bring user to login/home screen after successful register here
                                     }
                                     else {
                                         Toast.makeText(SignUpActivity.this, "User Failed to Register Code:1", Toast.LENGTH_LONG).show();

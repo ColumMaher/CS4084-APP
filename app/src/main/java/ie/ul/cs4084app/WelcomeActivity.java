@@ -27,7 +27,7 @@ public class WelcomeActivity extends AppCompatActivity {
         //US central 1 db, ours is in europe so we pass our db URL
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("Test :)");
+        //myRef.setValue("Test :)");
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
@@ -49,7 +49,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onButtonSignUpClicked(View view){
-        Intent intent = new Intent(WelcomeActivity.this, SignUpActivity.class);
+        Intent intent = new Intent(WelcomeActivity.this, ChooseUserTypeActivity.class);
         startActivity(intent);
     }
 
