@@ -50,10 +50,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void onButtonSignUpClicked(View view){
         Intent intent = new Intent(WelcomeActivity.this, ChooseUserTypeActivity.class);
+        intent.putExtra("choice", false);
         startActivity(intent);
     }
 
     public void onButtonSignInClicked(View view){
-
+        Intent intent = new Intent(WelcomeActivity.this, ChooseUserTypeActivity.class);
+        intent.putExtra("choice", true);
+        startActivity(intent);
     }
 }

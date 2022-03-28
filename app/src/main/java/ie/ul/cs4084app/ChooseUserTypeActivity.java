@@ -15,8 +15,18 @@ public class ChooseUserTypeActivity extends AppCompatActivity {
     }
 
     public void onButtonCustomerClicked(View view){
-        Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpActivity.class);
-        startActivity(intent);
+        boolean choice = false;
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            choice = extras.getBoolean("choice");
+        }
+        if (choice == false) {
+            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        } else{
+            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInCustomerActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void onButtonSupplierClicked(View view){
