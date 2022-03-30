@@ -74,7 +74,7 @@ public class SignUpActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             User user = new User(UserName, Password, Email, MobileNumber);
 
-                            FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference()
+                            FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
