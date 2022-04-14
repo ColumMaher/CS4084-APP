@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS4084App">
         <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignInCustomerActivity"
             android:exported="false" />
         <activity

@@ -3,6 +3,7 @@ package ie.ul.cs4084app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -41,26 +42,29 @@ public class SignInCustomerActivity extends AppCompatActivity {
     }
 
     public void txtCustomerSignInForgotPasswordClicked(View v){
-
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        startActivity(intent);
     }
     public void txtCustomerSignInRegisterClicked(View v){
-
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
     }
     public void buttonSignInScreenSignInClicked(View v){
 
         String userName = editTextUserName.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        //Bug returns to Choose user type screen instead of showing error and toast
         //Error checks
         if (!Patterns.EMAIL_ADDRESS.matcher(userName).matches() || userName.isEmpty()) {
             editTextUserName.setError("Please enter a Valid Email");
             editTextUserName.requestFocus();
+            return;
         }
 
         if (editTextPassword.length() < 6 || password.isEmpty()) {
             editTextPassword.setError("Password must be at least 6 characters");
             editTextPassword.requestFocus();
+            return;
         }
         //Show loading bar while processing
         progressBar.setVisibility(View.VISIBLE);

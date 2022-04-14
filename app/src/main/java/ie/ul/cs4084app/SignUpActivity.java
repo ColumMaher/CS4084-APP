@@ -51,18 +51,22 @@ public class SignUpActivity extends AppCompatActivity {
         if(UserName.isEmpty()){
             editTextUserName.setError("Please enter User Name");
             editTextUserName.requestFocus();
+            return;
         }
         if(Password.isEmpty() || Password.length() < 6){
             editTextPassword.setError("Please enter a Password containing at least 6 characters");
             editTextPassword.requestFocus();
+            return;
         }
         if(Email.isEmpty()){
             editTextEmail.setError("Please enter an Email Address");
             editTextEmail.requestFocus();
+            return;
         }
         if(MobileNumber.isEmpty()){
             editTextMobileNumber.setError("Please enter a Phone Number");
             editTextMobileNumber.requestFocus();
+            return;
         }
         progressBar.setVisibility(View.VISIBLE);
 
