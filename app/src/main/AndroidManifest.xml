@@ -13,6 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS4084App">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
@@ -29,7 +52,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -12,9 +12,19 @@
         <entry key="..\:/Users/Colum/AndroidStudioProjects/CS4084App/app/src/main/res/layout/activity_splash.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Colum/AndroidStudioProjects/CS4084App/app/src/main/res/layout/activity_welcome.xml" value="0.358695652173913" />
         <entry key="app/src/main/res/drawable/button_sign_up.xml" value="0.2365" />
+        <entry key="app/src/main/res/drawable/ic_shopping_cart.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_track.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_choose_user_type.xml" value="0.2470534904805077" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_drawer_base.xml" value="0.1482320942883046" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.20554199218750002" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.22675791298847914" />
+        <entry key="app/src/main/res/layout/content_layout.xml" value="0.1482320942883046" />
+        <entry key="app/src/main/res/layout/main_drawer_header.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/main_drawer_menu.xml" value="0.1494301392992824" />
       </map>
     </option>
   </component>

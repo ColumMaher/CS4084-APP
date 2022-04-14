@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
 
         //Hide navigation bar that was just project name in text
         //Then hide status bar above
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //Animate text in splash screen
