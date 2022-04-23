@@ -31,11 +31,11 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        editTextUserName = (EditText)findViewById(R.id.editTextUserName);
-        editTextPassword = (EditText)findViewById(R.id.editTextPassword);
-        editTextEmail = (EditText)findViewById(R.id.editTextEmail);
-        editTextMobileNumber = (EditText)findViewById(R.id.editTextMobileNumber);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        editTextUserName = findViewById(R.id.editTextUserName);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextMobileNumber = findViewById(R.id.editTextMobileNumber);
+        progressBar = findViewById(R.id.progressBar);
         mAuth = FirebaseAuth.getInstance();
 
     }
@@ -76,24 +76,22 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            //Create user object then add to Firebase
                             User user = new User(UserName, Password, Email, MobileNumber);
 
                             FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()){
-                                        Toast.makeText(SignUpActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility(View.GONE);
-                                        //add intent to bring user to login/home screen after successful register here
-                                    }
-                                    else {
-                                        Toast.makeText(SignUpActivity.this, "User Failed to Register Code:1", Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                }
-                            });
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())/*Here user is identified by firebase auth ID*/
+                                    .setValue(user).addOnCompleteListener(task1 -> {
+                                        if (task1.isSuccessful()){
+                                            Toast.makeText(SignUpActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
+                                            progressBar.setVisibility(View.GONE);
+                                            //add intent to bring user to login/home screen after successful register here
+                                        }
+                                        else {
+                                            Toast.makeText(SignUpActivity.this, "User Failed to Register Code:1", Toast.LENGTH_LONG).show();
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                    });
                         }
                         else {
                             Toast.makeText(SignUpActivity.this, "User Failed to Register Code:2", Toast.LENGTH_LONG).show();

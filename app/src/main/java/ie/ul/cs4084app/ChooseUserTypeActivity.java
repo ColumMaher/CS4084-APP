@@ -20,7 +20,7 @@ public class ChooseUserTypeActivity extends AppCompatActivity {
         if (extras != null){
             choice = extras.getBoolean("choice");
         }
-        if (choice == false) {
+        if (!choice) {
             Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpActivity.class);
             startActivity(intent);
         } else{
@@ -30,6 +30,17 @@ public class ChooseUserTypeActivity extends AppCompatActivity {
     }
 
     public void onButtonSupplierClicked(View view){
-        //bring user to SupplierSignupActivity
+        boolean choice = false;
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            choice = extras.getBoolean("choice");
+        }
+        if (!choice) {
+            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpRestaurantActivity.class);
+            startActivity(intent);
+        } else{
+            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInCustomerActivity.class);
+            startActivity(intent);
+        }
     }
 }

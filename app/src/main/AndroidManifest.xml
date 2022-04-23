@@ -13,6 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS4084App">
         <activity
+            android:name=".SignUpRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".restaurantSignUp"
+            android:exported="false"
+            android:label="@string/title_activity_restaurant_sign_up"
+            android:theme="@style/Theme.CS4084App.NoActionBar" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -32,9 +40,7 @@
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
@@ -52,7 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

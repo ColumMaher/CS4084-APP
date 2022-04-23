@@ -34,7 +34,7 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
         TextView restaurantDetails = convertView.findViewById(R.id.restaurant_name);
 
         imageView.setImageResource(getItem(position).getImage());
-        restaurantDetails.setText(getItem(position).getInfo());
+        restaurantDetails.setText(getItem(position).getAddress());
 
 
         return convertView;

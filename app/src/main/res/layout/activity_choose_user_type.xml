@@ -40,6 +40,7 @@
         android:layout_height="250dp"
         android:background="@drawable/cashregister"
         android:contentDescription="Supplier"
+        android:onClick="onButtonSupplierClicked"
         android:text="Supplier"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
