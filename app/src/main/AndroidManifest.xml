@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS4084App">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpRestaurantActivity"
             android:exported="false" />
         <activity
