@@ -1,19 +1,20 @@
 package ie.ul.cs4084app;
 
+import java.util.HashMap;
+
 public class Restaurant {
     private int image;
     private String name;
     private String email;
     private String Password;
     private String address;
-    private Menu menu;
+    HashMap<String, Object> menu = new HashMap<>();
 
     public Restaurant(String name, String email, String Password, String address) {
         this.name = name;
         this.email = email;
         this.Password = Password;
         this.address = address;
-        this.menu = new Menu();
     }
 
     public void setImage(int image){
@@ -56,11 +57,17 @@ public class Restaurant {
         this.email = email;
     }
 
-    public Menu getMenu() {
+    public HashMap<String, Object> getMenu() {
         return menu;
     }
 
-    public void setMenu(Menu menu) {
+    public void setMenu(HashMap<String, Object> menu) {
         this.menu = menu;
+    }
+    public void addMenuItem(String name, double price){
+        menu.put(name, price);
+    }
+    public void removeMenuItem(String name){
+        menu.remove(name);
     }
 }
