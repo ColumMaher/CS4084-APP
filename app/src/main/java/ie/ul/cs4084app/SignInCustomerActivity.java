@@ -86,4 +86,59 @@ public class SignInCustomerActivity extends AppCompatActivity {
             }
         });
     }
+    public void isUser() {
+
+        final String userEnteredUsername = editTextUserName.getText().toString().trim();
+        final String userEnteredPassword = editTextPassword.getText().toString().trim();
+
+
+        DatabaseReference reference = FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users");
+
+        Query checkUser = reference.orderByChild("UserName").equalTo(userEnteredUsername);
+
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()) {
+
+                    editTextUserName.setError(null);
+
+
+                    String passwordFromDB = dataSnapshot.child(userEnteredUsername).child("Password").getValue(String.class);
+
+                    if(passwordFromDB.equals(userEnteredPassword)){
+
+                        String userNameFromDB = dataSnapshot.child(userEnteredUsername).child("UserName").getValue(String.class);
+                        String emailFromDB = dataSnapshot.child(userEnteredUsername).child("Email").getValue(String.class);
+                        String mobileNumberFromDB = dataSnapshot.child(userEnteredUsername).child("MobileNumber").getValue(String.class);
+
+                        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+
+                        intent.putExtra("name", userNameFromDB);
+                        intent.putExtra("Email", emailFromDB);
+                        intent.putExtra("MobileNumber", mobileNumberFromDB);
+
+                        startActivity(intent);
+
+                    }
+                    else{
+                        editTextPassword.setError("Wrong Password");
+                        editTextPassword.requestFocus();
+                    }
+                }
+                else{
+                    editTextUserName.setError("Wrong Username");
+                    editTextUserName.requestFocus();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+
+
+
+        });
+    }
 }
