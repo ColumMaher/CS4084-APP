@@ -2,25 +2,25 @@ package ie.ul.cs4084app;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.util.Log;
+        import android.view.View;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeRestaurantActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_welcome_restaurant);
 
         // Write a message to the database
         //If getInstance has no parameters it well get instance of googles
@@ -49,13 +49,13 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onButtonSignUpClicked(View view){
-        Intent intent = new Intent(WelcomeActivity.this, SignUpActivity.class);
+        Intent intent = new Intent(WelcomeRestaurantActivity.this, SignUpRestaurantActivity.class);
         //intent.putExtra("choice", false);
         startActivity(intent);
     }
 
     public void onButtonSignInClicked(View view){
-        Intent intent = new Intent(WelcomeActivity.this, SignInCustomerActivity.class);
+        Intent intent = new Intent(WelcomeRestaurantActivity.this, SignInRestaurantActivity.class);
         //intent.putExtra("choice", true);
         startActivity(intent);
     }

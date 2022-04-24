@@ -39,10 +39,12 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_orders.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_sign_in_restaurant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.20554199218750002" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_track.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.22675791298847914" />
+        <entry key="app/src/main/res/layout/activity_welcome_restaurant.xml" value="0.2126019945602901" />
         <entry key="app/src/main/res/layout/content_layout.xml" value="0.1482320942883046" />
         <entry key="app/src/main/res/layout/main_drawer_header.xml" value="0.1" />
         <entry key="app/src/main/res/menu/main_drawer_menu.xml" value="0.1494301392992824" />

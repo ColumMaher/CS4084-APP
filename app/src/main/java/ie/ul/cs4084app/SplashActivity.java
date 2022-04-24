@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, ChooseUserTypeActivity.class);
                     startActivity(intent);
                     finish();//Clear memory as splash screen is no longer used
                 }

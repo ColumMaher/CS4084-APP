@@ -15,32 +15,36 @@ public class ChooseUserTypeActivity extends AppCompatActivity {
     }
 
     public void onButtonCustomerClicked(View view){
-        boolean choice = false;
-        Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            choice = extras.getBoolean("choice");
-        }
-        if (!choice) {
-            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpActivity.class);
-            startActivity(intent);
-        } else{
-            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInCustomerActivity.class);
-            startActivity(intent);
-        }
+//        boolean choice = false;
+//        Bundle extras = getIntent().getExtras();
+//        if (extras != null){
+//            choice = extras.getBoolean("choice");
+//        }
+//        if (!choice) {
+//            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpActivity.class);
+//            startActivity(intent);
+//        } else{
+//            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInCustomerActivity.class);
+//            startActivity(intent);
+//        }
+        Intent intent = new Intent(ChooseUserTypeActivity.this, WelcomeActivity.class);
+        startActivity(intent);
     }
 
     public void onButtonSupplierClicked(View view){
-        boolean choice = false;
-        Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            choice = extras.getBoolean("choice");
-        }
-        if (!choice) {
-            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpRestaurantActivity.class);
-            startActivity(intent);
-        } else{
-            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInRestaurantActivity.class);
-            startActivity(intent);
-        }
+//        boolean choice = false;
+//        Bundle extras = getIntent().getExtras();
+//        if (extras != null){
+//            choice = extras.getBoolean("choice");
+//        }
+//        if (!choice) {
+//            Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpRestaurantActivity.class);
+//            startActivity(intent);
+//        } else{
+//            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInRestaurantActivity.class);
+//            startActivity(intent);
+//        }
+        Intent intent = new Intent(ChooseUserTypeActivity.this, WelcomeRestaurantActivity.class);
+        startActivity(intent);
     }
 }
