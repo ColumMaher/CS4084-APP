@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Adam/Documents/GitHub/CS4084-APP/app/src/main/res/drawable/button_sign_in.xml" value="0.407" />
+        <entry key="..\:/Users/Adam/Documents/GitHub/CS4084-APP/app/src/main/res/drawable/ic_track.xml" value="0.5475" />
         <entry key="..\:/Users/Adam/Documents/GitHub/CS4084-APP/app/src/main/res/layout/activity_choose_user_type.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Adam/Documents/GitHub/CS4084-APP/app/src/main/res/layout/activity_dashboard.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Adam/Documents/GitHub/CS4084-APP/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Colum/AndroidStudioProjects/CS4084App/app/src/main/res/drawable/button_sign_in.xml" value="0.2985" />
         <entry key="..\:/Users/Colum/AndroidStudioProjects/CS4084App/app/src/main/res/drawable/button_sign_up.xml" value="0.2985" />
         <entry key="..\:/Users/Colum/AndroidStudioProjects/CS4084App/app/src/main/res/drawable/scrollbuttons.xml" value="0.298" />
