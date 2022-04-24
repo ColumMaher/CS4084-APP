@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuEditorActivity" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/header">
+
+        <EditText
+            android:id="@+id/menuinput"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:hint="Enter Item Name" />
+
+        <EditText
+            android:id="@+id/menuinput2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/menuinput"
+            android:layout_toRightOf="@+id/menuinput"
+            android:ems="10"
+            android:hint="Enter Item Price"
+            android:inputType="numberDecimal"
+            >
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/addmenuitem"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/menuinput2"
+            android:src="@drawable/menu_add_button" />
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/restaurantmenueditorlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"/>
+
+</RelativeLayout>
