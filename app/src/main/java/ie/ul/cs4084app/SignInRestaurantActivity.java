@@ -72,13 +72,13 @@ public class SignInRestaurantActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(SignInRestaurantActivity.this, "User has successfully Signed In", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignInRestaurantActivity.this, "Supplier has successfully Signed In", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
 
                     startActivity(new Intent(SignInRestaurantActivity.this, RestaurantMainMenuActivity.class));
                 }
                 else {
-                    Toast.makeText(SignInRestaurantActivity.this, "User has failed to Signed In", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignInRestaurantActivity.this, "Supplier has failed to Signed In", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                 }
             }

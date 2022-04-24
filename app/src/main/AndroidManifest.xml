@@ -27,6 +27,12 @@
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
+            android:name=".RestaurantMainMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuEditorActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpRestaurantActivity"
             android:exported="false" />
         <activity
