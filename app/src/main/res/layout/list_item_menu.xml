@@ -1,26 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:padding="16dp"
-    android:layout_height="match_parent" android:layout_width="match_parent">
+    android:orientation="horizontal"
+    android:weightSum="100"
+    >
 
     <TextView
-        android:id="@+id/txtName"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Item name"
+        android:id="@+id/itemName"
+        android:textAlignment="center"
+        android:layout_weight="50"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Name" />
+        android:orientation="vertical"
+        android:layout_weight="50"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Item price"
+            android:gravity="center"
+            android:id="@+id/itemPrice"
+            />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/txtPrice"
-        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:id="@+id/quantity"
+        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtName"
-        android:layout_marginLeft="20dp"
-        android:maxLength="40"
-        android:singleLine="true"
-        android:text="Price" />
-</RelativeLayout>
+        android:layout_weight="50"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/buttonDec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/buttonInc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:text="+" />
+
+</LinearLayout>

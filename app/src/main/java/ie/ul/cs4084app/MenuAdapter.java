@@ -15,25 +15,33 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class MenuAdapter extends ArrayAdapter<String> {
+public class MenuAdapter extends ArrayAdapter<MenuItem> {
+    int mResource;
     private Context mContext;
-    private int mResource;
-    public MenuAdapter(@NonNull Context context, int resource, @NonNull ArrayList<String> objects) {
+    ArrayList<MenuItem> menuList;
+    public MenuAdapter(@NonNull Context context, int resource, @NonNull ArrayList<MenuItem> objects) {
         super(context, resource, objects);
-        this.mContext = context;
-        this.mResource = resource;
+        mContext = context;
+        mResource = resource;
+        menuList = objects;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        convertView = layoutInflater.inflate(mResource,parent,false);
-        TextView txtName = convertView.findViewById(R.id.txtName);
-        TextView txtPrice = convertView.findViewById(R.id.txtPrice);
+        String name = menuList.get(position).getName();
+        Double price = menuList.get(position).getPrice();
 
-        txtName.setText(getItem(position));
-        txtPrice.setText(getItem(position));
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        convertView = inflater.inflate(mResource, parent, false);
+
+        TextView itemName = convertView.findViewById(R.id.itemName);
+        TextView itemPrice = convertView.findViewById(R.id.itemPrice);
+
+        itemName.setText(name);
+        itemPrice.setText(String.valueOf(price));
+
+
 
         return convertView;
     }
