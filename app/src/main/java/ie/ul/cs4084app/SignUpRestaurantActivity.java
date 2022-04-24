@@ -88,19 +88,24 @@ public class SignUpRestaurantActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+
                             //Create a default menu for Restaurants
                             HashMap<String, Object> defaultMenu = new HashMap<>();
                             defaultMenu.put("Burger", 2.50);
                             defaultMenu.put("Sprite", 2.00);
+
                             //Create and add new restaurant user
                             Restaurant r = new Restaurant(RestaurantName,Email,Password,Address);
+
                             FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Restaurant")
                                     .child(RestaurantName)/*Restaurant Name main identifier in Database*/
                                     .setValue(r).addOnCompleteListener(task1 -> {
                                 if (task1.isSuccessful()){
+
                                     //Add Menu after adding Restaurant, we want the menu as a child
                                     //Didn't find a way to do it one query
                                     r.setMenu(defaultMenu);
+
                                     FirebaseDatabase.getInstance("https://cs4084app-29f54-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Restaurant/" + RestaurantName)
                                             .child("Menu")/*Restaurant Name main identifier in Database*/
                                             .setValue(r.getMenu());
