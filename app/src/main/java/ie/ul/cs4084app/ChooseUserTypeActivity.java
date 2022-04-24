@@ -39,7 +39,7 @@ public class ChooseUserTypeActivity extends AppCompatActivity {
             Intent intent = new Intent(ChooseUserTypeActivity.this, SignUpRestaurantActivity.class);
             startActivity(intent);
         } else{
-            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInCustomerActivity.class);
+            Intent intent = new Intent(ChooseUserTypeActivity.this, SignInRestaurantActivity.class);
             startActivity(intent);
         }
     }
